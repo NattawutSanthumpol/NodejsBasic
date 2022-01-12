@@ -1,11 +1,26 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/',(req,res)=>{
+router.get('/', (req, res) => {
     const name = "Nattwut Santhumpol"
     const age = 29
     const address = "<h3>สมุทรสาคร</h3>"
-    res.render('index',{name:name,age:age,address:address})
+    const products = ["เสื้อ","พัดลม","หูฟัง","คีย์บอร์ด","CPU","RAM","GPU","Monitor"]
+    const productss = [
+        {name:"NoteBook",price:35000,image:"images/products/product1.png"},
+        {name:"เสื้อ",price:2500,image:"images/products/product2.png"},
+        {name:"หูฟัง",price:780,image:"images/products/product3.png"},
+        {name:"NoteBook",price:35000,image:"images/products/product1.png"},
+        {name:"เสื้อ",price:2500,image:"images/products/product2.png"},
+        {name:"หูฟัง",price:780,image:"images/products/product3.png"},
+        {name:"NoteBook",price:35000,image:"images/products/product1.png"},
+        {name:"เสื้อ",price:2500,image:"images/products/product2.png"},
+        {name:"หูฟัง",price:780,image:"images/products/product3.png"},
+        {name:"NoteBook",price:35000,image:"images/products/product1.png"},
+        {name:"เสื้อ",price:2500,image:"images/products/product2.png"},
+        {name:"หูฟัง",price:780,image:"images/products/product3.png"}
+    ]
+    res.render('index',{productss:productss})
 })
 
 
