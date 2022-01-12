@@ -1,6 +1,18 @@
 const express = require('express')
 const router = express.Router()
-const path = require('path')
+
+router.get('/',(req,res)=>{
+    const name = "Nattwut Santhumpol"
+    const age = 29
+    const address = "<h3>สมุทรสาคร</h3>"
+    res.render('index',{name:name,age:age,address:address})
+})
+
+
+module.exports = router
+
+
+// const path = require('path')
 
 
 
@@ -26,5 +38,3 @@ const path = require('path')
 //         // res.send("<h1>404 Page Not Found</h1>")
 //     }
 // })
-
-module.exports = router
