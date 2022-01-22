@@ -11,17 +11,18 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     </head>
     <body>
-        <%- include('navber.ejs')  %> 
+        <%- include('navber.ejs') %>
         <div class="container">
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <div class="card mt-4">
-                        <img class="card-img-top img-fluid" src="/images/products/<%= product.image %> " alt="" />
+                        <img class="card-img-top img-fluid" src="/images/products/<%= product.image %>"/>
                         <div class="card-body">
                             <h3 class="card-title"><%= product.name %> </h3>
                             <h4>ราคา <%= product.price %> บาท</h4>
                             <p class="card-text"><%= product.description %> </p>
+                            
                         </div>
                     </div>
                 </div>

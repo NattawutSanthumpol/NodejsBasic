@@ -31,8 +31,13 @@
                             <td><%= item.name %> </td>
                             <td><%= item.price %> </td>
                             <td><%= item.description %> </td>
-                            <td><a href="/delete/<%= item._id %> " class="btn btn-danger" onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่ ?')")>ลบ</a></td>
-                            <td><button class="btn btn-primary">แก้ไข</button></td>
+                            <td><a href="/delete/<%= item._id%> " class="btn btn-danger" onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่ ?')")>ลบ</a></td>
+                            <td>
+                                <form action="/edit" method="post">
+                                    <input type="hidden" name="edit_id" value="<%= item._id %>">
+                                    <button type="submit" class="btn btn-primary">แก้ไข</button>
+                                </form>
+                            </td>
                         </tr>
                     <% }) %>
                 </tbody>
