@@ -9,20 +9,18 @@ router.get('/', (req, res) => {
     const productss = [
         {name:"NoteBook",price:35000,image:"images/products/product1.png"},
         {name:"เสื้อ",price:2500,image:"images/products/product2.png"},
-        {name:"หูฟัง",price:780,image:"images/products/product3.png"},
-        {name:"NoteBook",price:35000,image:"images/products/product1.png"},
-        {name:"เสื้อ",price:2500,image:"images/products/product2.png"},
-        {name:"หูฟัง",price:780,image:"images/products/product3.png"},
-        {name:"NoteBook",price:35000,image:"images/products/product1.png"},
-        {name:"เสื้อ",price:2500,image:"images/products/product2.png"},
-        {name:"หูฟัง",price:780,image:"images/products/product3.png"},
-        {name:"NoteBook",price:35000,image:"images/products/product1.png"},
-        {name:"เสื้อ",price:2500,image:"images/products/product2.png"},
         {name:"หูฟัง",price:780,image:"images/products/product3.png"}
     ]
     res.render('index',{productss:productss})
 })
 
+router.get('/addForm', (req, res) => {
+    res.render('form')
+})
+
+router.get('/manage', (req, res) => {
+    res.render('manage')
+})
 
 module.exports = router
 
