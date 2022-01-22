@@ -50,7 +50,7 @@ router.get('/insert', (req, res) => {
     res.render('form')
 })
 
-router.get('/product/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     const product_id = req.params.id
     Product.findOne({_id:product_id}).exec((err,doc) =>{
         if(err) console.log(err);
